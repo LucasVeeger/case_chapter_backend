@@ -20,4 +20,4 @@ RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/wh
 COPY . .
 
 # Run the web service on container startup.
-CMD ["hypercorn", "main:app", "--bind", "::"]
+CMD ["hypercorn", "app/main.py", "--bind", "::"]
