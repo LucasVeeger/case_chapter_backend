@@ -14,6 +14,7 @@ RUN apk add --no-cache \
     python3-dev \
     musl-dev \
     linux-headers \
+    make \
     && pip install --no-cache-dir -r requirements.txt
 
 # Run the web service on container startup.
