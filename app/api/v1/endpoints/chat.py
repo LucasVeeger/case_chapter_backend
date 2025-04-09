@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from fastapi import APIRouter
 from app.services.ai_service import chat_with_history
-from typing import List
+from typing import List, Optional
 
 class Message(BaseModel):
     role: str
@@ -9,7 +9,7 @@ class Message(BaseModel):
 
 class ChatQuery(BaseModel):
     prompt: Message
-    previous_messages: List[Message] | None = None
+    previous_messages: Optional[List[Message]] = None
 
 class ChatResponse(BaseModel):
     response: str
