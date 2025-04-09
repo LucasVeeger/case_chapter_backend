@@ -8,8 +8,13 @@ WORKDIR /app
 # Copy local code to the container image.
 COPY . .
 
-# Install project dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install system dependencies and project dependencies
+RUN apk add --no-cache \
+    gcc \
+    python3-dev \
+    musl-dev \
+    linux-headers \
+    && pip install --no-cache-dir -r requirements.txt
 
 # Run the web service on container startup.
 CMD ["hypercorn", "main:app", "--bind", "::"]
