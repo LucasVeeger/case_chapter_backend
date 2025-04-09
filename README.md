@@ -15,7 +15,9 @@ This AI-powered application helps users search through parts catalogs using natu
 1. Clone the repository
 2. Create a virtual environment and activate it
 3. Install the dependencies
-4. Run the application with `uvicorn app.main:app --reload`
+4. Create a `.env` file in the root directory with the following variables:
+    - `OPENAI_API_KEY`: Your OpenAI API key
+5. Run the application with `uvicorn app.main:app --reload`
 
 ## Vector Database preprocessing
 
