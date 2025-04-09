@@ -15,6 +15,13 @@ RUN apk add --no-cache \
     musl-dev \
     linux-headers \
     make \
+    swig \
+    g++ \
+    freetype-dev \
+    harfbuzz-dev \
+    jpeg-dev \
+    openjpeg-dev \
+    zlib-dev \
     && pip install --no-cache-dir -r requirements.txt
 
 # Run the web service on container startup.
