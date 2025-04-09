@@ -21,7 +21,7 @@ This AI-powered application helps users search through parts catalogs using natu
 
 ## Vector Database preprocessing
 
-0. Put the PDF catalogs in the `app/assets/` folder and add file in the process_pdf.py file's main
+0. Put the PDF catalogs in the `app/assets/` folder and add their filepaths in the process_pdf.py file's main
 1. Run `python app/database/process_pdf.py` to process the PDF catalogs into a vector database
 2. Run `python app/database/search.py` to test search the vector database
 
