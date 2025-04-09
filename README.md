@@ -14,7 +14,7 @@ This AI-powered application helps users search through parts catalogs using natu
 
 1. Clone the repository
 2. Create a virtual environment and activate it
-3. Install the dependencies
+3. Install the dependencies (uncomment the pymupdf line in requirements.txt, it gave some trouble with the docker build deployment but is needed for vector database creation)
 4. Create a `.env` file in the root directory with the following variables:
     - `OPENAI_API_KEY`: Your OpenAI API key
 5. Run the application with `uvicorn app.main:app --reload`

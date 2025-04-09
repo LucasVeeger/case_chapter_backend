@@ -58,9 +58,9 @@
 
 # if __name__ == "__main__":
 #     print("Processing PDFs to vector database...")
-#     # print("Processing 89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf")
-#     # process_pdf_to_vector_db("assets/89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf")
+#     print("Processing 89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf")
+#     process_pdf_to_vector_db("assets/89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf")
 #     print("Processing 81998407_Onderdelenboek_Xtreme_a0bba19ac3.pdf")
 #     process_pdf_to_vector_db("assets/81998407_Onderdelenboek_Xtreme_a0bba19ac3.pdf", add_to_existing=False)
-#     # print("Processing onderdelenlijst.pdf")
-#     # process_pdf_to_vector_db("assets/onderdelenlijst.pdf", add_to_existing=True)
+#     print("Processing onderdelenlijst.pdf")
+#     process_pdf_to_vector_db("assets/onderdelenlijst.pdf", add_to_existing=True)
