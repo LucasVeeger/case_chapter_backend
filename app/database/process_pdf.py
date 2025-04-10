@@ -18,7 +18,7 @@
 #     with pdfplumber.open(pdf_path) as pdf:
 #         print(len(pdf.pages))
 #         for page in pdf.pages:
-#             if page.page_number < 400 or page.page_number > 600:
+#             if page.page_number < 0 or page.page_number > 200:
 #                 continue
 #             table = page.extract_table()
 #             if table:
@@ -41,7 +41,7 @@
 #         chunk_group.append(row_text)
 #         if row_text != "":
 #             for key, value in row.items():
-#                 chunk_group.append(f"{key}:{value}")
+#                 chunk_group.append(f"{value}")
 #             chunks.append(chunk_group)
         
 
@@ -78,9 +78,9 @@
 # if __name__ == "__main__":
 #     print("Processing PDFs to vector database...")
 #     # print("Processing 89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf")
-#     # process_pdf_to_vector_db("assets/89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf", add_to_existing=False)
-#     # print("Processing onderdelenlijst.pdf")
-#     # process_pdf_to_vector_db("assets/onderdelenlijst.pdf", add_to_existing=True)
+#     # process_pdf_to_vector_db("assets/89b637e633d862c2ac076d27b4104cd3_85f6d305f1.pdf", add_to_existing=True)
+#     print("Processing onderdelenlijst.pdf")
+#     process_pdf_to_vector_db("assets/onderdelenlijst.pdf", add_to_existing=True)
 #     # print("Processing 81998407_Onderdelenboek_Xtreme_a0bba19ac3.pdf")
-#     # process_pdf_to_vector_db("assets/81998407_Onderdelenboek_Xtreme_a0bba19ac3.pdf", add_to_existing=True)
+#     # process_pdf_to_vector_db("assets/81998407_Onderdelenboek_Xtreme_a0bba19ac3.pdf", add_to_existing=False)
 
