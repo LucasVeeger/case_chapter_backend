@@ -15,7 +15,7 @@ def chat_with_history(new_message, previous_messages=None):
         model="gpt-3.5-turbo",
         messages=[{
             "role": "system",
-            "content": "Extract only the essential search terms from the user's question. Remove conversational elements and keep only what's needed for a vector search. In case of a product code, respond with the product code, nothing else. Respond with only the search terms, nothing else."
+            "content": "Extract only the essential search terms from the user's question. Remove conversational elements and keep only what's needed for a vector search. In case of a product code, respond with the 'article number ' + product code, nothing else. Respond with only the search terms, nothing else."
         }, {
             "role": "user",
             "content": new_message.content
@@ -24,7 +24,8 @@ def chat_with_history(new_message, previous_messages=None):
     cleaned_query = clean_response.choices[0].message.content
     print(f"Cleaned query: {cleaned_query}")
     # search with cleaned message in the database
-    search_results = similarity_search(cleaned_query)
+    filter_dict = {}
+    search_results = similarity_search(cleaned_query, filter_dict=filter_dict)
     search_results_str = "\n\n".join([
         f"Result: {res.page_content} [{res.metadata}]" 
         for i, res in enumerate(search_results)

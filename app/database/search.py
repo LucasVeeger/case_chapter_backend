@@ -32,6 +32,6 @@ def similarity_search(query: str, k: int = 5, filter_dict: dict = None) -> list:
         return []
 
 if __name__ == "__main__":
-    results = similarity_search("203207", k=5)
+    results = similarity_search("7773663", k=5)
     for res in results:
         print(f"* {res.page_content} [{res.metadata}]")
